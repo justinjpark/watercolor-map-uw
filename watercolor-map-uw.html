@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Watercolor Map of UW</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    </head>
+    <body>
+        <h1 style="font-family: 'Chalkduster'; 
+            text-align: center;
+            position: relative;
+            top: 10%;
+            z-index: 1;">
+            Watercolor Map of UW
+        </h1>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+        <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+        <div id="mapid" 
+            style="width: 720px; 
+            height: 540px; 
+            margin: 0; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);">
+        </div>
+        <script>
+            var mymap = L.map('mapid', {center: [47.654143, -122.307470], zoom: 15});
+            var layer = new L.StamenTileLayer('watercolor');
+            mymap.addLayer(layer);
+        </script>
+    </body>
+</html>
